@@ -1,0 +1,97 @@
+---
+title: "SW 670 FInal Project"
+author: "Amber Fischer"
+date: "07/01/2019"
+output:
+  word_document:
+    toc: yes
+  html_document:
+    code_folding: hide
+    number_sections: no
+    theme: journal
+    toc: yes
+    toc_float: yes
+---
+  
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## DATA SOURCE
+
+### PoliceKillingsUS
+
+This data, PoliceKillingsUS, is from the Fatal Police Shootings in the US dataset, collected by the Washington Post from 2015 - 2017. It was retreived from the Kaggle website.
+
+
+```{r}
+
+library(readr)
+PoliceKillingsUS <- read_csv("~/Box Sync/ambfisch/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv")
+
+# view(PoliceKillingsUS)
+# summary(PoliceKillingsUS)
+
+```
+
+![](/Users/ambers/desktop/mural.png)
+
+
+## R BACKGROUND
+
+Police brutality has gained nationwide attention with the death of Michael Brown in 2014 and other similar incidents. The Washington Post began recording details of every fatal civilian shooting in the US by an on duty officer as cases are reported. This dataset includes information on 2536 cases, or individuals killed by police during the time of collection. 
+
+For this assignment I explored different relationships of variables including the observation of mental illness and identified threat level of the victim, threat level according to gender, how victims were armed by race, and the total of victims in each state.
+
+(Embed the predictor/consequence diagram)
+
+## GRAPHS
+
+### RStudio {.tabset}
+
+These graphs were created in RStudio, saved, then embedded here. The first is a Base R graph and the other two were created using ggplot2.
+
+#### Base R
+![](/Users/ambers/Box Sync/670 hw 1 r graph.png)
+
+This visualization illustrates the number of deaths occuring at each age group. The rainbow color was applied simply for aesthetics. 
+
+#### ggplot2
+![](/Users/ambers/Box Sync/670 hw 1 gplot 1.png)
+
+This graph illustrates the presence of mental illness within each category of threat. Becuase mental illness was seen in only a small percentage of cases in the data set, it accounts for less than half in each threat level category.
+
+#### ggplot2
+![](/Users/ambers/Box Sync/670 hw 1 gplot 2.png)
+
+This graph presents a different visualization of threat level and mental illness. Attack is most frequently reported for both those who did present signs of mental illness and those who did not.
+
+
+### Tableau
+
+This dash board includes three graphs created in Tableau.
+
+![](/Users/ambers/Desktop/SW 670 Tableau HW.png)
+
+The top graph presents the type of weapon individuals were armed with according to race group. Gun was the most common weapon for all races.
+
+The lower graphs again explore the observed threat level of individuals killed by officers. The one on the left illustrates the differences by sex, of which there were many more reported cases involving male victims. The one on the right illustrates differences according to the presence of mental illness. In both visualizations, attack was more common than other behaviors perceived as threatening. 
+
+
+## MAP
+
+### QGIS
+
+This map, created with QGIS3.6, is a graduated display of the number of killings taking place in each state between 2015 and 2017.
+
+![](/Users/ambers/Desktop/sw 670 qgis map.png)
+
+This graph illustrates the number range within which each state's fatal police shooting falls into. Though this graph does not denote the exact number of killings, it does clearly present which states reported the most police killings (California, Arizona, Texas, and Florida) and the fewest killings during the data collection period.
+To determine whether this proportionate to the population of each state, further evaluation is required.
+
+## CONCLUSION
+
+Though more information is needed to gain a full understanding of the data presented in these graphs, this activity facilitated exploration of new tools and methods of data visualization. The creation of each graph increased familiarity to the programs and provided an opportunity to develop and practice new skills.
+
